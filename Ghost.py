@@ -163,7 +163,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ 𝐘𝐎𝐔 𝐇𝐀𝐕𝐄 𝐍𝐎 𝐀𝐍𝐘𝐎𝐍𝐄 𝐏𝐋𝐀𝐍 𝐃𝐌 𝐅𝐎𝐑 𝐁𝐔𝐘 : - @RONIT_IN")
+        await update.message.reply_text("❌ YOU HAVE NO ACCESS , 𝐃𝐌 : - @RONIT_IN")
         return
 
     if len(context.args) != 3:
@@ -231,7 +231,7 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 print(f"Error sending message to {user}: {e}")
         response = "Message sent to all users."
     else:
-        response = "𝐎𝐍𝐋𝐘 𝐎𝐖𝐍𝐄𝐑 𝐂𝐀𝐍 𝐔𝐒𝐄."
+        response = "𝐎𝐍𝐋𝐘 @RONIT_IN 𝐂𝐀𝐍 𝐔𝐒𝐄."
     
     await update.message.reply_text(response)
 
